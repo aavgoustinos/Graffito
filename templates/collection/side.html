@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+
+
+<h1> The side name: {{ side.side_title }}</h1>
+
+<div class="container">
+    <iframe class="responsive-iframe" src="{{side.side_iframe_url}}"width="100%" height="500px"></iframe>
+    </div>
+
+<h1>Graffito Found in {{ side.side_title }}</h1>
+
+<br><hr>
+{% for side in side.item_set.all %}
+
+
+    <h4>Graffito Name:{{ side.item_title }}</h4>
+
+
+     <img src="{{side.item_image.url }}" alt="sides" style="width:auto%;height:auto%;">
+     <br>
+
+     <br>
+
+        <a href="/collection/item/{{side.slug}}" class="button alt">Learn More</a>
+
+
+
+{% endfor %}
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
