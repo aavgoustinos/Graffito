@@ -12,8 +12,8 @@ urlpatterns = [
 
 
 
-        path('sides_json', views.json_sides, name="collection/sides_json"),
-        path('items_json', views.json_items, name="collection/items_json"),
+        path('/sides_json', views.json_sides, name="collection/sides_json"),
+        path('/items_json', views.json_items, name="collection/items_json"),
 
         path('load_json', views.load_json, name="collection/load_json"),
 
